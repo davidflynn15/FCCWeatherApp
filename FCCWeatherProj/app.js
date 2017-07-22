@@ -6,17 +6,16 @@ $(document).ready(function(){
   var kTemp; //kelvin
   
   //get your location
-  $.getJSON("http://ip-api.com/json", function(data2) {
-    lat = data2.lat;
-    long = data2.lon;
+  //$.getJSON("http://ip-api.com/json", function(data2) {
+  //  lat = data2.lat;
+  //  long = data2.lon;
     //console.log(lat);
     //console.log(long);
-    /*if (navigator.geolocation) {  
-    navigator.geolocation.getCurrentPosition(position);
-    lat = position.coords.lat;
-    long = position.coords.lon;
-    } */
-  
+  //if (navigator.geolocation) {  
+  navigator.geolocation.getCurrentPosition(function(position) {
+    lat = position.coords.latitude;
+    long = position.coords.longitude;
+      
     //var api = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&APPID=7ed66fef841f89651d8b257c5f9852f2';
     var api = 'https://fcc-weather-api.glitch.me/api/current?lon=' + long + '&lat=' + lat;
     //console.log(api);
