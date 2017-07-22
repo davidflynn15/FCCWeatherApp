@@ -1,0 +1,21 @@
+body {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#tempArea {
+  margin: 20px;  
+}
+
+#fTemp {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+
+h1, h3 {
+  color: lightgrey;
+  font-weight: bold;
+}
